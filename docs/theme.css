@@ -29,3 +29,11 @@
   /* textura "digital" dos posts da Alcateia */
   --scan: repeating-linear-gradient(0deg, rgba(47, 224, 90, 0.05) 0 1px, transparent 1px 3px);
 }
+
+/* ícone oficial do CS2 desenhado como máscara: a cor vem de "color" (currentColor) */
+.wicon.gi {
+  display: block;
+  background: currentColor;
+  -webkit-mask: var(--icon) center / contain no-repeat;
+  mask: var(--icon) center / contain no-repeat;
+}
