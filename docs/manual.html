@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AASIAM HUD — Manual do operador</title>
+  <link rel="icon" href="img/logo-aasiam.png">
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--text); font: 500 18px/1.55 var(--font-display);
+      background: radial-gradient(ellipse at top, #0c2414 0%, var(--ink) 55%) fixed, var(--ink); }
+    header { display: flex; align-items: center; gap: 18px; padding: 28px 24px; max-width: 920px; margin: 0 auto; }
+    header img { width: 96px; height: 96px; }
+    header h1 { margin: 0; font: italic 900 44px/1 var(--font-display); text-transform: uppercase; }
+    header h1 span { color: var(--neon); }
+    header p { margin: 6px 0 0; color: var(--muted); }
+    main { max-width: 920px; margin: 0 auto; padding: 0 24px 60px; }
+    nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+    nav a { padding: 6px 12px; border: 1px solid var(--line); color: var(--text); text-decoration: none; font-weight: 700; font-size: 15px; text-transform: uppercase; letter-spacing: .05em; }
+    nav a:hover { border-color: var(--neon); }
+    section { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--green); padding: 18px 22px; margin-bottom: 18px; }
+    h2 { margin: 0 0 10px; font: italic 800 26px var(--font-display); text-transform: uppercase; }
+    h3 { margin: 16px 0 6px; font: 800 19px var(--font-display); color: var(--neon); text-transform: uppercase; letter-spacing: .03em; }
+    ol, ul { padding-left: 22px; margin: 8px 0; }
+    li { margin: 5px 0; }
+    b, strong { color: #fff; }
+    kbd { display: inline-block; padding: 1px 8px; border: 1px solid var(--neon); border-bottom-width: 3px; font: 700 16px var(--font-display); color: var(--neon); }
+    code { color: var(--neon); font: 14px ui-monospace, Consolas, monospace; word-break: break-all; }
+    .tip { border-left: 4px solid var(--neon); background: rgba(47,224,90,.08); padding: 10px 14px; margin: 10px 0; }
+    .warn { border-left: 4px solid var(--t); background: rgba(244,183,64,.08); padding: 10px 14px; margin: 10px 0; }
+    .check li { list-style: none; margin-left: -22px; }
+    .check li::before { content: '☐ '; color: var(--neon); }
+    dt { font-weight: 800; color: #fff; margin-top: 12px; }
+    dd { margin: 2px 0 0; color: var(--muted); }
+    dd b { color: var(--text); }
+    @media (max-width: 600px) { header h1 { font-size: 32px; } header img { width: 64px; height: 64px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="img/logo-aasiam.png" alt="">
+    <div>
+      <h1>AASIAM <span>HUD</span></h1>
+      <p>Manual do operador da transmissão — comissão organizadora</p>
+    </div>
+  </header>
+  <main>
+    <p style="margin:0 0 18px"><a href="./" style="color:var(--neon)">← Voltar para o download</a></p>
+    <nav>
+      <a href="#instalar">Instalar</a>
+      <a href="#checklist">Checklist do dia</a>
+      <a href="#partida">Durante a partida</a>
+      <a href="#obs">OBS</a>
+      <a href="#atualizacoes">Atualizações</a>
+      <a href="#problemas">Problemas comuns</a>
+    </nav>
+
+    <section id="instalar">
+      <h2>1. Instalar (uma vez só)</h2>
+      <ol>
+        <li>Execute o arquivo <b>AASIAM-HUD-…-Setup.exe</b> no PC do observador (o PC que roda o CS2).</li>
+        <li>Se o Windows mostrar <b>"O Windows protegeu o computador"</b>, clique em <b>Mais informações → Executar assim mesmo</b>. Isso aparece porque o programa é novo e não tem assinatura digital paga.</li>
+        <li>Siga o instalador. Ao terminar, o AASIAM HUD abre sozinho e cria um atalho na Área de Trabalho.</li>
+        <li>Na primeira vez, ele procura o CS2 e <b>instala a integração sozinho</b>. Se o CS2 estava aberto, feche e abra o jogo de novo.</li>
+      </ol>
+      <div class="tip">O painel de controle mostra o <b>Guia de primeiros passos</b> no topo. Cada etapa fica <b>verde</b> quando está pronta.</div>
+    </section>
+
+    <section id="checklist">
+      <h2>2. Checklist do dia do jogo</h2>
+      <ul class="check">
+        <li>Abrir o <b>AASIAM HUD</b> (ícone da Área de Trabalho). Ele fica perto do relógio do Windows (bandeja).</li>
+        <li>No painel, aba <b>Partida</b>: conferir campeonato, fase e formato (MD1, MD3 ou MD5).</li>
+        <li><b>Time A</b> e <b>Time B</b>: nome, sigla (até 5 letras) e logo. Clique no quadrado da logo para trocar.</li>
+        <li><b>Jogadores</b>: quando os jogadores aparecerem, clique na foto de cada um para colocar a foto e, se quiser, um apelido.</li>
+        <li><b>Veto de mapas</b>: escolha quem começa e clique em <b>Gerar sequência</b>. Preencha os mapas conforme os times banem e escolhem.</li>
+        <li><b>Patrocinadores</b>: confira se as logos estão lá.</li>
+        <li>No CS2: <b>Configurações → Vídeo → Modo de exibição: Tela cheia em janela</b>.</li>
+        <li>Entrar no servidor da partida <b>como espectador</b> (ou pelo GOTV). O HUD aparece sozinho.</li>
+      </ul>
+      <div class="tip">Quer treinar antes? Clique em <b>Testar sem o jogo</b> na pré-visualização. Uma partida de mentira roda no HUD. <b>Pare o teste antes de transmitir.</b></div>
+    </section>
+
+    <section id="partida">
+      <h2>3. Durante a partida</h2>
+      <dl>
+        <dt><kbd>Shift</kbd> + <kbd>W</kbd></dt>
+        <dd>Mostra ou esconde o HUD por cima do jogo. (Dá para trocar a tecla no ícone da bandeja → <b>Atalho do overlay</b>.)</dd>
+        <dt>Trocar de mapa na série</dt>
+        <dd>No painel, em cada time, use <b>+</b> e <b>−</b> em <b>Mapas vencidos</b>. Preencha também o placar do mapa no <b>Veto</b>.</dd>
+        <dt>Estatísticas</dt>
+        <dd>Botão <b>Mostrar estatísticas</b> (seção Jogadores) abre o quadro com K/A/D, ADR, HS% e MVP. Com <b>Estatísticas no fim do mapa</b> marcado, ele aparece sozinho quando o mapa acaba.</dd>
+        <dt>Times nos lados errados?</dt>
+        <dd>Clique em <b>⇄ Inverter lados</b> na seção Partida. Se o servidor usar os mesmos nomes dos times do painel (<code>mp_teamname_1</code> / <code>mp_teamname_2</code>), isso é automático.</dd>
+        <dt>Esconder tudo rapidamente</dt>
+        <dd>Botão <b>Ocultar HUD</b> no painel (vale para o overlay e para o OBS ao mesmo tempo).</dd>
+        <dt>Entre mapas / antes do jogo</dt>
+        <dd>Mostre a cena de veto no OBS (veja abaixo).</dd>
+      </dl>
+    </section>
+
+    <section id="obs">
+      <h2>4. OBS</h2>
+      <h3>Opção A — mais simples</h3>
+      <p>Adicione <b>Captura de tela</b> (monitor onde está o CS2). O jogo e o HUD vêm juntos, exatamente como o observador vê.</p>
+      <h3>Opção B — HUD em camada separada</h3>
+      <ol>
+        <li>Adicione <b>Captura de jogo</b> do CS2.</li>
+        <li>Acima dela, adicione <b>Fonte de navegador</b> com a URL <code id="u-hud"></code>, largura <b>1920</b> e altura <b>1080</b>.</li>
+      </ol>
+      <h3>Cena de veto de mapas</h3>
+      <p>Crie uma cena com <b>Fonte de navegador</b> em <code id="u-veto"></code>, 1920 × 1080.</p>
+      <div class="warn">O OBS precisa estar no <b>mesmo PC</b> do AASIAM HUD (os endereços começam com <code>localhost</code>).</div>
+    </section>
+
+    <section id="atualizacoes">
+      <h2>5. Atualizações</h2>
+      <p>O AASIAM HUD se atualiza sozinho. Não é preciso baixar nada:</p>
+      <ol>
+        <li>Ao abrir (e a cada 2 horas), ele verifica se há versão nova e baixa em segundo plano, <b>sem interromper a transmissão</b>.</li>
+        <li>Quando termina, aparece uma faixa verde no topo do painel: <b>"Nova versão pronta"</b>.</li>
+        <li>A versão nova é <b>instalada sozinha quando o app for fechado</b> (ícone da bandeja → Sair). Na próxima vez que abrir, já está atualizado.</li>
+        <li>Se quiser atualizar na hora, clique em <b>Atualizar agora</b> (painel ou ícone da bandeja). O app reinicia em poucos segundos. Evite durante uma partida ao vivo — se o CS2 estiver conectado, ele pergunta antes.</li>
+      </ol>
+      <div class="tip">A versão instalada aparece ao lado do nome no painel (ex.: <b>v1.0.1</b>) e no menu do ícone da bandeja.</div>
+    </section>
+
+    <section id="problemas">
+      <h2>6. Problemas comuns</h2>
+      <dl>
+        <dt>O HUD não aparece por cima do jogo</dt>
+        <dd>O CS2 precisa estar em <b>Tela cheia em janela</b>. Em "Tela cheia" o Windows não deixa nada ficar por cima. Depois aperte <kbd>Shift</kbd>+<kbd>W</kbd>.</dd>
+        <dt>O painel diz "Aguardando o CS2" com o jogo aberto</dt>
+        <dd>Feche e abra o CS2 de novo (ele só lê a integração ao abrir). Se continuar, clique em <b>Instalar agora</b> no guia e reinicie o jogo.</dd>
+        <dt>"Não encontrei o CS2"</dt>
+        <dd>O CS2 precisa estar instalado pela Steam neste PC. Se estiver em outro disco, abra a Steam uma vez e tente de novo pelo ícone da bandeja → <b>Reinstalar integração do CS2</b>.</dd>
+        <dt>Minimapa não aparece</dt>
+        <dd>O radar é tirado do próprio CS2 deste PC. Use <b>Extrair radares do CS2</b> na seção Minimapa. Mapas fora do pool oficial podem não ter radar.</dd>
+        <dt>"A porta 3000 já está em uso"</dt>
+        <dd>O AASIAM HUD já está aberto (olhe o ícone perto do relógio) ou outro programa usa essa porta. Feche-o e abra o HUD de novo.</dd>
+        <dt>Fechei o painel sem querer</dt>
+        <dd>O programa continua rodando. Clique no ícone da AASIAM perto do relógio do Windows para abrir o painel de novo. Para fechar de verdade: ícone → <b>Sair</b>.</dd>
+        <dt>Shift+W atrapalha o observador</dt>
+        <dd>Ícone da bandeja → <b>Atalho do overlay</b> → escolha F9, F10 ou outra combinação.</dd>
+      </dl>
+    </section>
+  </main>
+  <script>
+    document.getElementById('u-hud').textContent = 'http://localhost:3000/hud/cs2/';
+    document.getElementById('u-veto').textContent = 'http://localhost:3000/hud/veto/';
+  </script>
+</body>
+</html>

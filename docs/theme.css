@@ -1,0 +1,31 @@
+/* Identidade visual AASIAM / Alcateia — mude aqui e todos os overlays acompanham */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;1,700;1,800;1,900&family=Teko:wght@500;600;700&display=swap');
+
+:root {
+  /* verdes da marca */
+  --neon: #2fe05a;
+  --neon-glow: rgba(47, 224, 90, 0.55);
+  --green: #13a83c;
+  --green-deep: #0a5c24;
+
+  /* fundos */
+  --ink: #030705;
+  --panel: rgba(5, 13, 8, 0.93);
+  --panel-2: rgba(11, 26, 16, 0.95);
+  --line: rgba(47, 224, 90, 0.22);
+
+  /* texto */
+  --text: #f3f8f4;
+  --muted: #8ea597;
+
+  /* lados do CS2 */
+  --ct: #5db3ff;
+  --t: #f4b740;
+  --danger: #ff4545;
+
+  --font-display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --font-num: 'Teko', 'Arial Narrow', sans-serif;
+
+  /* textura "digital" dos posts da Alcateia */
+  --scan: repeating-linear-gradient(0deg, rgba(47, 224, 90, 0.05) 0 1px, transparent 1px 3px);
+}
